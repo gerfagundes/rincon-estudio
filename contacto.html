@@ -9,7 +9,7 @@
 <body>
     <header>
         <h1>Contacto</h1>
-        <p>¿Tienes alguna pregunta? ¡Contáctanos!</p>
+        <p>¿Tienes alguna pregunta? ¡Escríbeme!</p>
     </header>
     <nav>
         <ul>
@@ -20,8 +20,83 @@
         </ul>
     </nav>
     <main>
-        <h2>Escríbeme</h2>
-        <p>¡Contáctanos para más información!</p>
+        <section>
+            <h2>Escríbeme</h2>
+            <p>¡Contáctame para más información!</p>
+        </section>
+
+        <section>
+            <!--FORMULARIO DE CONTACTO-->
+            <!--form sirve para crear formularios de entrada de datos-->
+            <form>
+                <fieldset>
+
+                    <!--required sirve para hacer que el campo sea obligatorio-->
+                    <legend><h3>Información personal</h3></legend>
+                    <!--label sirve para crear etiquetas de entrada de datos-->
+                    <label for="nombre">Nombre:</label>
+                    <!--input sirve para crear campos de entrada de datos-->
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="numero">Edad:</label>
+                    <input type="number" id="numero" name="numero" min="1" max="120" required>
+
+                </fieldset>
+
+                <!--Campo de mensaje-->
+                <fieldset>
+
+                    <legend><h3>Tu mensaje</h3></legend>
+                    <label for="curso">Curso:</label>
+                    <!--textarea sirve para crear áreas de texto de entrada de datos-->
+                    <textarea id="curso" name="curso" rows="4" cols="50" required></textarea>
+
+                </fieldset>
+
+                <!--Campo de asunto-->
+                <fieldset>
+
+                    <legend><h3>Asunto</h3></legend>
+                    <label for="asunto">¿Sobre qué quieres escribirme?:</label>
+                    <select name="asunto" id="asunto">
+                        <option value="pregunta">Dudas</option>
+                        <option value="sugerencia">Sugerencias</option>
+                        <option value="idea">Colaboración</option>
+                    </select>
+
+                </fieldset>
+
+                <!--fieldset sirve para agrupar elementos del formulario-->
+                <!--Campo de preferencias de estudio-->
+                <fieldset>
+
+                    <!--legend sirve para crear un título para el grupo de elementos-->
+                    <legend><h3>¿Cómo estudias mejor?</h3></legend>
+                    <label for="opcion1">Mañana</label>
+                    <input type="radio" id="opcion1" name="horario" required>
+                    <label for="opcion2">Tarde</label>
+                    <input type="radio" id="opcion2" name="horario" required>
+                    <label for="opcion3">Noche</label>
+                    <input type="radio" id="opcion3" name="horario" required>
+
+                </fieldset>
+
+                <!--Campo de privacidad-->
+                <fieldset>
+
+                    <legend><h3>Privacidad</h3></legend>
+                    <p>Al enviar este formulario, aceptas nuestra política de privacidad.</p>
+                    <label for="privacidad">He leído y acepto la política de privacidad</label>
+                    <input type="checkbox" id="privacidad" name="privacidad" required>
+
+                </fieldset>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
     </main>
 
     <footer>
