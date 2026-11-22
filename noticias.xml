@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0">
+    <channel>
+        <title>Noticias del rincón de estudio</title>
+        <link>https://gerfagundes.github.io/rincon-estudio/</link>
+        <description>Novedades y actualizaciones del rincón de estudio.</description>
+
+        <!--Noticias-->
+        <!--Cada item representa una noticia del rincón de estudio-->
+        <!--Este item representa la publicación de la web del rincón del estudio-->
+        <item>
+            <title>Publicación de Rincón de Estudio</title>
+            <link>https://gerfagundes.github.io/rincon-estudio/index.html</link>
+            <description>Presentación de la web dedicada a las técnicas y los recursos de estudio.</description>
+            <pubDate>Thu, 19 Nov 2026 12:28:01 +0100</pubDate>
+        </item>
+
+        <!--Este item representa la incorporación de un formulario de contacto-->
+        <item>
+            <title>Incorporación de formulario de contacto</title>
+            <link>https://gerfagundes.github.io/rincon-estudio/contacto.html</link>
+            <description>Se ha añadido un formulario de contacto con campos obligatorios y grupos de radios.</description>
+            <pubDate>Sat, 21 Nov 2026 13:07:27 +0100</pubDate>
+        </item>
+        
+        <!--Este item representa la incorporación de música lo-fi-->
+        <item>
+            <title>Incorporación de música lo-fi</title>
+            <link>https://gerfagundes.github.io/rincon-estudio/index.html</link>
+            <description>Se ha añadido una opción para reproducir música lo-fi mientras estudias.</description>
+            <pubDate>Sun, 22 Nov 2026 01:25:51 +0100</pubDate>
+        </item>
+    </channel>
+</rss>
