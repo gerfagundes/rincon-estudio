@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <!-- Filtro de brillo cálido lofi -->
+    <filter id="lofi-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <!-- Degradado del fondo -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2b213a" />
+      <stop offset="100%" stop-color="#1a1423" />
+    </linearGradient>
+    <!-- Degradado de la esfera -->
+    <radialGradient id="face-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff4e6" />
+      <stop offset="85%" stop-color="#f3d5b5" />
+      <stop offset="100%" stop-color="#d4a373" />
+    </radialGradient>
+  </defs>
+
+  <!-- Fondo redondeado estilo widget -->
+  <rect width="300" height="300" rx="45" fill="url(#bg-grad)" />
+
+  <!-- Estrellas decorativas -->
+  <circle cx="55" cy="60" r="2" fill="#ffd166" opacity="0.8" />
+  <circle cx="245" cy="70" r="2.5" fill="#f4978e" opacity="0.8" />
+  <circle cx="235" cy="235" r="2" fill="#ffd166" opacity="0.7" />
+  <path d="M65 225 L67 231 L73 233 L67 235 L65 241 L63 235 L57 233 L63 231 Z" fill="#f4978e" opacity="0.8" />
+
+  <!-- Patas del reloj -->
+  <line x1="105" y1="225" x2="88" y2="250" stroke="#e07a5f" stroke-width="10" stroke-linecap="round" />
+  <line x1="195" y1="225" x2="212" y2="250" stroke="#e07a5f" stroke-width="10" stroke-linecap="round" />
+
+  <!-- Campanas superiores -->
+  <path d="M 75 95 A 30 30 0 0 1 120 65 Z" fill="#f4978e" stroke="#2b213a" stroke-width="4" stroke-linejoin="round" />
+  <path d="M 225 95 A 30 30 0 0 0 180 65 Z" fill="#f4978e" stroke="#2b213a" stroke-width="4" stroke-linejoin="round" />
+
+  <!-- Martillo superior -->
+  <line x1="150" y1="70" x2="150" y2="52" stroke="#ffd166" stroke-width="6" stroke-linecap="round" />
+  <rect x="136" y="46" width="28" height="8" rx="4" fill="#ffd166" />
+
+  <!-- Cuerpo principal del reloj -->
+  <circle cx="150" cy="155" r="82" fill="#e07a5f" stroke="#2b213a" stroke-width="5" />
+  <circle cx="150" cy="155" r="70" fill="url(#face-grad)" stroke="#8d5b4c" stroke-width="3" />
+
+  <!-- Marcas de las horas -->
+  <g stroke="#6d4c41" stroke-width="3.5" stroke-linecap="round">
+    <line x1="150" y1="95" x2="150" y2="103" />
+    <line x1="150" y1="207" x2="150" y2="215" />
+    <line x1="90" y1="155" x2="98" y2="155" />
+    <line x1="202" y1="155" x2="210" y2="155" />
+  </g>
+  <!-- Puntos intermedios -->
+  <g fill="#a47148">
+    <circle cx="180" cy="103" r="2.2" />
+    <circle cx="202" cy="125" r="2.2" />
+    <circle cx="202" cy="185" r="2.2" />
+    <circle cx="180" cy="207" r="2.2" />
+    <circle cx="120" cy="207" r="2.2" />
+    <circle cx="98" cy="185" r="2.2" />
+    <circle cx="98" cy="125" r="2.2" />
+    <circle cx="120" cy="103" r="2.2" />
+  </g>
+
+  <!-- Manecillas (marcando las 10:10) -->
+  <!-- Hora -->
+  <line x1="150" y1="155" x2="122" y2="132" stroke="#3d2c2e" stroke-width="6" stroke-linecap="round" />
+  <!-- Minutos -->
+  <line x1="150" y1="155" x2="186" y2="122" stroke="#3d2c2e" stroke-width="4.5" stroke-linecap="round" />
+  <!-- Segundero con brillo neón suave -->
+  <line x1="150" y1="168" x2="150" y2="105" stroke="#ff758f" stroke-width="2" stroke-linecap="round" filter="url(#lofi-glow)" />
+
+  <!-- Centro de las manecillas -->
+  <circle cx="150" cy="155" r="6" fill="#e07a5f" stroke="#3d2c2e" stroke-width="2" />
+</svg>
