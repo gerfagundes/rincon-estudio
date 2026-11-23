@@ -15,6 +15,14 @@
     type="application/rss+xml"
     title="Noticias del Rincón de Estudio"
     href="noticias.xml">
+
+    <!--Enlace a Google Fonts para la tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">   
+
+    <!--Enlace a la hoja de estilos CSS-->
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <!--<header> sirve para definir la cabecera 
@@ -51,57 +59,61 @@
 
         <!--section sirve para agrupar contenido relacionado en la página-->
         <section>
+            <span class="etiqueta-nuevo">NUEVO</span>
             <h2>Estudia mejor, con calma y con buena música</h2>
             <p>Organiza tus sesiones de estudio de manera eficiente y efectiva.</p>
         </section>
 
-        <section>
-            <h2>Consejos de estudio</h2>
-            <ul>
-                <li>Establece una zona de estudio dedicada y ordenada.</li>
-                <li>Utiliza técnicas de estudio efectivas, como el método Pomodoro.</li>
-                <li>Haz resúmenes y esquemas para repasar los conceptos.</li>
-                <li>Escucha música relajante mientras estudias.</li>
-            </ul>
-        </section>
+        <!--Envolvemos todo dentro de un div para crear una clase (rejilla-estudio) a la que aplicaremos estilos en el css-->
+        <div class="rejilla-estudio">
+            <section>
+                <h2>Consejos de estudio</h2>
+                <ul>
+                    <li>Establece una zona de estudio dedicada y ordenada.</li>
+                    <li>Utiliza técnicas de estudio efectivas, como el método Pomodoro.</li>
+                    <li>Haz resúmenes y esquemas para repasar los conceptos.</li>
+                    <li>Escucha música relajante mientras estudias.</li>
+                </ul>
+            </section>
 
-        <!--Aquí irá un audio de lofi-->
-        <section>
-            <h2>Música para estudiar</h2>
-            <audio controls loop>
-                <source src="audio/purrplecat-lost-and-found-632809.mp3" type="audio/mpeg">
-            </audio>
-            <figure>
-                <figcaption>
-                    <p>Audio: purrplecat - Lost and Found</p>
-                    <p>Autor: BoDleasons</p>
-                    <p>Licencia: Licencia de contenido de Pixabay</p>
-                    <p>Procedencia: https://pixabay.com/es/music/late-lofi-chill-smooth-chill-lofi-for-vlogs-and-background-music-159456/</p>
-                </figcaption>
-            </figure>
-        </section>
+            <!--Aquí irá un audio de lofi-->
+            <section>
+                <h2>Música para estudiar</h2>
+                <audio controls loop>
+                    <source src="audio/purrplecat-lost-and-found-632809.mp3" type="audio/mpeg">
+                </audio>
+                <figure>
+                    <figcaption>
+                        <p>Audio: purrplecat - Lost and Found</p>
+                        <p>Autor: BoDleasons</p>
+                        <p>Licencia: Licencia de contenido de Pixabay</p>
+                        <p>Procedencia: https://pixabay.com/es/music/late-lofi-chill-smooth-chill-lofi-for-vlogs-and-background-music-159456/</p>
+                    </figcaption>
+                </figure>
+            </section>
 
-        <!--Aquí irá el video lofi-->
-        <section>
-            <h2>Video para estudiar</h2>
-            <!--iframe sirve para incrustar contenido de otra página web-->
-            <!--En este caso debo usar el formato embed para incrustar un video de Youtube-->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/rFZHOHl-L8A" title="Directo de Youtube con música para estudiar" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-            </iframe>
-        </section>
+            <!--Aquí irá el video lofi-->
+            <section>
+                <h2>Video para estudiar</h2>
+                <!--iframe sirve para incrustar contenido de otra página web-->
+                <!--En este caso debo usar el formato embed para incrustar un video de Youtube-->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/rFZHOHl-L8A" title="Directo de Youtube con música para estudiar" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+                </iframe>
+            </section>
 
-        <!--Aquí irá la lista de asignaturas-->
-        <section>
-            <h2>Mis asignaturas</h2>
-            <ul>
-                <li>Programación</li>
-                <li>Base de Datos</li>
-                <li>Lenguajes de Marcas</li>
-                <li>Sistemas Informáticos</li>
-            </ul>
-        </section>
+            <!--Aquí irá la lista de asignaturas-->
+            <section>
+                <h2>Mis asignaturas</h2>
+                <ul>
+                    <li>Programación</li>
+                    <li>Base de Datos</li>
+                    <li>Lenguajes de Marcas</li>
+                    <li>Sistemas Informáticos</li>
+                </ul>
+            </section>
+        </div>
 
         <figure>
             <img src="imagenes/fondo-estudio.webp" alt="Imagen de un escritorio con un chico estudiando, rodeado de libros y un ordenador" width="1600" height="1005">

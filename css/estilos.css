@@ -1,0 +1,119 @@
+/*root sirve para definir variables CSS que puedo reutilizar en toda la página*/
+:root{
+    --color-principal: #8B7BA8;
+    --color-fondo: #F7F3EE;
+    --color-texto: #302C38;
+}
+*{
+    /*El box-sizing sirve para controlar cómo se calcula el tamaño de los elementos.*/
+    box-sizing:border-box;
+}
+
+body{
+    /*La fuente por defecto para todo el cuerpo del documento*/
+    font-family:'Poppins', system-ui, Arial, sans-serif;
+    /*Aplica los colores definidos en :root*/
+    background-color:var(--color-fondo);
+    color:var(--color-texto);
+}
+
+nav{
+    /*Sirve para definir el color de fondo de la navegación*/
+    background-color:var(--color-principal);
+}
+
+/*Lista de enlaces*/
+nav ul{
+    /*Convierte los elementos de la lista en un contenedor flex*/
+    display:flex;
+    /*Centra los elementos a lo largo del eje central*/
+    justify-content:center;
+    /*Alinea los elementos a lo largo del eje transversal*/
+    align-items:center;
+    /*Añade una separación entre los elementos*/
+    gap: 25px;
+    /*Elimina los puntos de la lista*/
+    list-style: none;
+    /*Elimina el margen exterior predeterminado*/
+    margin: 0;
+    /*Añade espacio interno al contenedor*/
+    padding: 15px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+/*Aquí se definen los estilos para las tarjetas de contenido*/
+.tarjetas{
+    /*Aquí estamos activando grid*/
+    display: grid;
+}
+
+.tarjetas{
+    display: grid;
+    /*Aquí estamos definiendo el diseño en cuadrícula con 2 columnas de igual tamaño*/
+    grid-template-columns:repeat(2, 1fr);
+}
+
+.tarjetas{
+    display: grid;
+    /*Aquí estamos definiendo el espacio entre las columnas*/
+    grid-template-columns:repeat (2, 1fr);
+    gap: 20px;
+}
+
+/*Rejilla que organiza las secciones de estudio*/
+.rejilla-estudio{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    gap: 20px;
+}
+
+/*Apariencia de cada tarjeta*/
+.rejilla-estudio section{
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    /*Crea una sombra al rededor de la tarjeta*/
+    box-shadow: 0 4px 10px rgba(48, 44, 56, 0.12);
+    position: relative;
+}
+
+/*Povocaremos un degradado en el encabezado*/
+header{
+    /**/
+    background: linear-gradient(
+        135deg,
+        var(--color-principal),
+        #C8B9E2 
+    );
+    color: white;
+    padding: 30px;
+    text-align:center;
+}
+
+/*Creamos una linea morada discontinua para debajo de los titulos de las tarjetas*/
+.rejilla-estudio section h2{
+    border-bottom: 2px dashed var(--color-principal);
+    padding-bottom: 18px;
+}
+
+/*Aplicamos que las navegación se mantenga fija en la parte superior*/
+nav{
+    position: sticky;
+    top: 0;
+    z-index:100;
+}
+
+.etiqueta-nuevo{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--color-principal);
+    color:white;
+    padding:5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
