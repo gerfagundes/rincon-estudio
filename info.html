@@ -30,6 +30,7 @@
         <h1>Información</h1>
         <p>Descubre más sobre el Rincón de Estudio y cómo puedes mejorar tu experiencia de aprendizaje.</p>
     </header>
+    <div class="linea-animada" aria-hidden="true"></div>
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
@@ -39,98 +40,107 @@
         </ul>
     </nav>
     <main>
-        <section>
-            <h2>Horario y material de estudio</h2>
-            <p>Esta es una página de información general.</p>
-        </section>
+        <div>
+            <section class="presentacion">
+                <h2>Horario y material de estudio</h2>
+                <p>Organizar bien tus sesiones marca la diferencia. 
+                    En esta sección encontrarás un horario orientativo pensado para 
+                    estudiar con ritmo constante y una selección de recursos esenciales para 
+                    preparar tu rincón de trabajo</p>
+            </section>
+        </div>
 
-        <section>
-            <h2>Horario semanal</h2>
-            <!--TABLA PARA MOSTRAR EL HORARIO DE ESTUDIO-->
-            <table>
-                <!--caption proporciona un título a la tabla-->
-                <caption><h3>Horario Semanal de Estudio</h3></caption>
-                <!--thead sirve para agrupar los encabezados de columna en la tabla-->
-                <thead>
-                    <tr>
-                        <!--scope="col" indica que la celda es un encabezado de columna-->
-                        <th scope="col">Día</th>
-                        <th scope="col">Franja Horaria</th>
-                        <th scope="col">Asignatura</th>
-                        <th scope="col">Técnica que usaré</th>
-                    </tr>
-                </thead>
+        <div class="tabla-contenedor">
+            <section class="tabla-contenedor">
+                <div class="tabla-contenedor">
+                    <h2>Horario semanal</h2>
+                    <!--TABLA PARA MOSTRAR EL HORARIO DE ESTUDIO-->
+                    <table class="tabla-contenedor">
+                        <!--caption proporciona un título a la tabla-->
+                        <caption><h3>Horario Semanal de Estudio</h3></caption>
+                        <!--thead sirve para agrupar los encabezados de columna en la tabla-->
+                        <thead>
+                            <tr>
+                                <!--scope="col" indica que la celda es un encabezado de columna-->
+                                <th scope="col">Día</th>
+                                <th scope="col">Franja Horaria</th>
+                                <th scope="col">Asignatura</th>
+                                <th scope="col">Técnica que usaré</th>
+                            </tr>
+                        </thead>
 
-                <!--tbody sirve para agrupar el contenido de la tabla-->
-                <tbody>
-                    <!--tr indica una fila en la tabla-->
-                    <tr>
-                        <!--td indica una celda en la tabla-->
-                        <td>Lunes</td>
-                        <td>16:00 - 21:00</td>
-                        <td>Programación</td>
-                        <td>Pomodoro</td>
-                    </tr>
-                    <tr>
-                        <td>Martes</td>
-                        <td>16:00 - 21:00</td>
-                        <td>Base de Datos</td>
-                        <td>Ejercicios Prácticos</td>
-                    </tr>
-                    <tr>
-                        <td>Miércoles</td>
-                        <td>16:00 - 21:00</td>
-                        <td>Lenguajes de Marcas</td>
-                        <td>Ejercicios Prácticos</td>
-                    </tr>
-                    <tr>
-                        <td>Jueves</td>
-                        <td>16:00 - 21:00</td>
-                        <td>Sistemas Informáticos</td>
-                        <td>Resúmenes</td>
-                    </tr>
-                    <tr>
-                        <td>Viernes</td>
-                        <td>00:00 - 02:00</td>
-                        <td>General</td>
-                        <td>Repaso de la semana</td>
-                    </tr>
-                    <tr>
-                        <td>Sábado</td>
-                        <td>12:00 - 16:00</td>
-                        <td>Programación</td>
-                        <td>Pomodoro</td>
-                    </tr>
-                    <tr>
-                        <td>Domingo</td>
-                        <td>12:00 - 16:00</td>
-                        <td>Base de Datos</td>
-                        <td>Resúmenes de Temas y Pomodoro</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+                        <!--tbody sirve para agrupar el contenido de la tabla-->
+                        <tbody>
+                            <!--tr indica una fila en la tabla-->
+                            <tr>
+                                <!--td indica una celda en la tabla-->
+                                <td>Lunes</td>
+                                <td>16:00 - 21:00</td>
+                                <td>Programación</td>
+                                <td>Pomodoro</td>
+                            </tr>
+                            <tr>
+                                <td>Martes</td>
+                                <td>16:00 - 21:00</td>
+                                <td>Base de Datos</td>
+                                <td>Ejercicios Prácticos</td>
+                            </tr>
+                            <tr>
+                                <td>Miércoles</td>
+                                <td>16:00 - 21:00</td>
+                                <td>Lenguajes de Marcas</td>
+                                <td>Ejercicios Prácticos</td>
+                            </tr>
+                            <tr>
+                                <td>Jueves</td>
+                                <td>16:00 - 21:00</td>
+                                <td>Sistemas Informáticos</td>
+                                <td>Resúmenes</td>
+                            </tr>
+                            <tr>
+                                <td>Viernes</td>
+                                <td>00:00 - 02:00</td>
+                                <td>General</td>
+                                <td>Repaso de la semana</td>
+                            </tr>
+                            <tr>
+                                <td>Sábado</td>
+                                <td>12:00 - 16:00</td>
+                                <td>Programación</td>
+                                <td>Pomodoro</td>
+                            </tr>
+                            <tr>
+                                <td>Domingo</td>
+                                <td>12:00 - 16:00</td>
+                                <td>Base de Datos</td>
+                                <td>Resúmenes de Temas y Pomodoro</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-        <section>
-            <h2>Los pasos del método Pomodoro</h2>
-            <ol>
-                <li>Elige la tarea que deseas completar</li>
-                <li>Configura un temporizador de 50 minutios</li>
-                <li>Trabaja en la tarea hasta que suene el temporizador</li>
-                <li>Descansa 10 minutos</li>
-                <li>Repite el proceso unas 4 veces</li>
-            </ol>
-        </section>
-        <section>
-            <h2>Material de estudio</h2>
-            <ul>
-                <li>Libreta y bolígrafo</li>
-                <li>Resaltadores</li>
-                <li>Temporizador</li>
-                <li>Música relajante</li>
-                <li>Agua</li>
-            </ul>
-        </section>
+            <section>
+                <h2>Los pasos del método Pomodoro</h2>
+                <ol>
+                    <li>Elige la tarea que deseas completar</li>
+                    <li>Configura un temporizador de 50 minutos</li>
+                    <li>Trabaja en la tarea hasta que suene el temporizador</li>
+                    <li>Descansa 10 minutos</li>
+                    <li>Repite el proceso unas 4 veces</li>
+                </ol>
+            </section>
+            <section>
+                <h2>Material de estudio</h2>
+                <ul>
+                    <li>Libreta y bolígrafo</li>
+                    <li>Resaltadores</li>
+                    <li>Temporizador</li>
+                    <li>Música relajante</li>
+                    <li>Agua</li>
+                </ul>
+            </section>
+        </div>
     </main>
 
     <footer>

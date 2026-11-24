@@ -1,6 +1,6 @@
 /*root sirve para definir variables CSS que puedo reutilizar en toda la página*/
 :root{
-    --color-principal: #8B7BA8;
+    --color-principal: #594475;
     --color-fondo: #F7F3EE;
     --color-texto: #302C38;
 }
@@ -45,25 +45,6 @@ nav a{
     text-decoration: none;
 }
 
-/*Aquí se definen los estilos para las tarjetas de contenido*/
-.tarjetas{
-    /*Aquí estamos activando grid*/
-    display: grid;
-}
-
-.tarjetas{
-    display: grid;
-    /*Aquí estamos definiendo el diseño en cuadrícula con 2 columnas de igual tamaño*/
-    grid-template-columns:repeat(2, 1fr);
-}
-
-.tarjetas{
-    display: grid;
-    /*Aquí estamos definiendo el espacio entre las columnas*/
-    grid-template-columns:repeat (2, 1fr);
-    gap: 20px;
-}
-
 /*Rejilla que organiza las secciones de estudio*/
 .rejilla-estudio{
     display: grid;
@@ -79,19 +60,27 @@ nav a{
     /*Crea una sombra al rededor de la tarjeta*/
     box-shadow: 0 4px 10px rgba(48, 44, 56, 0.12);
     position: relative;
+    /*junto con :hover sirve para que al pasar el raton sobre un boton, este reaccione*/
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 0;
+}
+
+/*Uso de :hover*/
+.rejilla-estudio section:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(48, 44, 56, 0.18);
 }
 
 /*Povocaremos un degradado en el encabezado*/
-header{
-    /**/
+header {
     background: linear-gradient(
         135deg,
         var(--color-principal),
-        #C8B9E2 
+        #8B5E6B
     );
     color: white;
     padding: 30px;
-    text-align:center;
+    text-align: center;
 }
 
 /*Creamos una linea morada discontinua para debajo de los titulos de las tarjetas*/
@@ -116,4 +105,132 @@ nav{
     padding:5px 10px;
     border-radius: 5px;
     font-size: 12px;
+    animation: pulso 2s ease-in-out infinite;
+}
+
+@keyframes pulso {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+.presentacion {
+    position: relative;
+    padding: 30px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(48, 44, 56, 0.12);
+}
+
+.presentacion h2 {
+    padding-right: 90px;
+}
+
+/*Adaptación para pantallas medianas*/
+@media(max-width: 900px){
+    .rejilla-estudio{
+        grid-template-columns: 1fr;
+    }
+}
+/*Adaptación para pantallas de móvil*/
+@media(max-width: 600px){
+    nav ul{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    header{
+        padding: 20px 12px;
+    }
+    main{
+        padding: 15px;
+    }
+}
+
+img {
+    /*impide que la imagen o el vídeo superen el ancho disponible.*/
+    max-width: 100%;
+    /*mantiene las proporciones originales de las imágenes.*/
+    height: auto;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 0;
+}
+
+/*Creamos una propiedad que hará que el ratón reaccione al estar encima de un botón, cambiandolo gradualmente de color*/
+button:hover{
+    background-color: #35254a;
+    color: #ffffff;
+}
+
+/*Esta propiedad hará que sea un cambio gradual*/
+button{
+    background-color: var(--color-principal);
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+/*:focus es una pseudoclase CSS que permite aplicar estilos a un elemento cuando recibe el foco*/
+input:focus,
+textarea:focus,
+select:focus{
+    outline:2px solid var(--color-principal);
+    outline-offset: 2px;
+    border-color: var(--color-principal);
+}
+
+/*:focus-visible permite al navegador mostrar el indicador de foco especialmente cuando considera que es necesario, por ejemplo, durante la navegación con teclado.*/
+button:focus-visible{
+    outline: 3px solid var(--color-principal);
+    outline-offset: 3px;
+}
+
+.linea-animada {
+    width: 100%;
+    height: 4px;
+    background: var(--color-principal);
+    transform-origin: left;
+    animation: avanzar 4s ease-in-out infinite alternate;
+}
+
+/*Hace que la línea del index se alargue y acorte*/
+@keyframes avanzar {
+    from {
+        transform: scaleX(0.15);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.tabla-contenedor{
+    /*hacen que el contenedor no supere el ancho disponible de su padre ni del viewport*/
+    /*clave para que a 360 px no empuje la página hacia la derecha.*/
+    width: 100%;
+    max-width: 100%;
+    /*le dice al navegador que, si la tabla es más ancha que el contenedor, no muestre barra de desplazamiento si cabe, 
+    y solo añada scroll horizontal dentro de esa caja cuando haga falta.*/
+    overflow-x: auto;
+}
+
+textarea{
+    width: 100%;
+    max-width: 100%;
+}
+
+audio {
+    width: 100%;
+    max-width: 100%;
 }
